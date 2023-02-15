@@ -18,6 +18,11 @@ namespace MVC_2022.Controllers
             return View();
         }
 
+        public IActionResult Teste()
+        {
+            return Ok("controller teste");
+        }
+
         public IActionResult Privacy()
         {
             return View();
