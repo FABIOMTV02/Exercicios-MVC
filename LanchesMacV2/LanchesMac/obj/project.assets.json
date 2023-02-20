@@ -3510,21 +3510,17 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\fabio\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\fabio\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\fabio\\OneDrive\\Documentos\\Exercicios-MVC\\LanchesMacV2\\LanchesMac\\LanchesMac.csproj",
+      "projectUniqueName": "C:\\workspace\\Exercicios MVC ASP NET CORE\\LanchesMacV2\\LanchesMac\\LanchesMac.csproj",
       "projectName": "LanchesMac",
-      "projectPath": "C:\\Users\\fabio\\OneDrive\\Documentos\\Exercicios-MVC\\LanchesMacV2\\LanchesMac\\LanchesMac.csproj",
+      "projectPath": "C:\\workspace\\Exercicios MVC ASP NET CORE\\LanchesMacV2\\LanchesMac\\LanchesMac.csproj",
       "packagesPath": "C:\\Users\\fabio\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\fabio\\OneDrive\\Documentos\\Exercicios-MVC\\LanchesMacV2\\LanchesMac\\obj\\",
+      "outputPath": "C:\\workspace\\Exercicios MVC ASP NET CORE\\LanchesMacV2\\LanchesMac\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
         "C:\\Users\\fabio\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -3588,7 +3584,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }
