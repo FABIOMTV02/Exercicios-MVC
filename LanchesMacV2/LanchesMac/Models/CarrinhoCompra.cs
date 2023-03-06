@@ -81,7 +81,7 @@ namespace LanchesMac.Models
             return quantidadeLocal;
         }
 
-        public List<CarrinhoCompraItem> GetCarrinhoCompraItem()
+        public List<CarrinhoCompraItem> GetCarrinhoCompraItens()
         {
             return CarrinhoCompraItems ??
                 (CarrinhoCompraItems =
