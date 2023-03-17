@@ -16,7 +16,7 @@ namespace LanchesMac.Models
         {
             //define uma sessão
             ISession session =
-                services.GetRequiredService<IHttpContextAccessor>()?.HttpContext?.Session;
+                services.GetRequiredService<IHttpContextAccessor>()?.HttpContext.Session;
 
             //obtém um serviço do tipo do nosso contexto
             var context = services.GetService<AppDbContext>();
