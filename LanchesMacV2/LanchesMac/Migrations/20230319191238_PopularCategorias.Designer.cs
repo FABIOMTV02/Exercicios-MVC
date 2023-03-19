@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace LanchesMac.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20230319001303_PopularCategorias")]
+    [Migration("20230319191238_PopularCategorias")]
     partial class PopularCategorias
     {
         /// <inheritdoc />
