@@ -16,7 +16,7 @@ namespace LanchesMac.Controllers
         }
 
         [HttpGet]
-        public IActionResult Chekout()
+        public IActionResult Checkout()
         {
             return View();
         }

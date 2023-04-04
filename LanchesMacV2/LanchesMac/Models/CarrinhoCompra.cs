@@ -86,7 +86,6 @@ namespace LanchesMac.Models
             return CarrinhoCompraItems ??
                 (CarrinhoCompraItems =
                 _context.CarrinhoCompraItems
-                .Where(c => c.CarrinhoCompraId == CarrinhoCompraId)
                 .Include(s => s.Lanche)
                 .ToList());
         }
@@ -101,10 +100,8 @@ namespace LanchesMac.Models
 
         public decimal GetCarrinhoCompraTotal()
         {
-            var total = _context.CarrinhoCompraItems
-                        .Where(c => c.CarrinhoCompraId == CarrinhoCompraId)
-                        .Select(c => c.Lanche.Preco * c.Quantidade).Sum();
-
+            var total = _context.CarrinhoCompraItems.Where(c => c.CarrinhoCompraId == CarrinhoCompraId)
+                .Select(c => c.Lanche.Preco * c.Quantidade).Sum();
             return total;
         }
     }
