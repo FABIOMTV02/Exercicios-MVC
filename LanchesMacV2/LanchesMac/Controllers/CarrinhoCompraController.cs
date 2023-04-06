@@ -44,7 +44,7 @@ namespace LanchesMac.Controllers
         public IActionResult RemoverItemDoCarrinhoCompra(int lancheId)
         {
             var lancheSelecionado = _lancheRepository.Lanches
-                .FirstOrDefault(p => p.LancheId == lancheId);
+                                    .FirstOrDefault(p => p.LancheId == lancheId);
 
             if (lancheSelecionado != null)
             {
