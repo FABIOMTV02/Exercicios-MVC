@@ -1,7 +1,7 @@
 ﻿using LanchesMac.ViewModels;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using System.Drawing.Text;
+
 
 namespace LanchesMac.Controllers
 {
@@ -57,12 +57,12 @@ namespace LanchesMac.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Register(LoginViewModel registroVM)
         {
-            if(!ModelState.IsValid)
+            if(ModelState.IsValid)
             {
                 var user = new IdentityUser { UserName = registroVM.UserName };
                 var result = await _userManager.CreateAsync(user, registroVM.Password);
 
-                if (result.Succeeded)
+                if(result.Succeeded)
                 {
                     //await _signInManager.SignInAsync(user, isPersistent: false);
                     return RedirectToAction("Login", "Account");
@@ -74,5 +74,6 @@ namespace LanchesMac.Controllers
             }
             return View(registroVM);
         }
+        // atualizar versões dos pacotes nuget para versão 6.0.x
     }
 }
