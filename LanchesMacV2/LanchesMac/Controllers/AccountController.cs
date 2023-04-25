@@ -93,6 +93,8 @@ namespace LanchesMac.Controllers
             return RedirectToAction("Index", "Home");
         }
 
+        //ERRO
+        //ele não renderiza a view (not found)
         public IActionResult AcessDenied()
         {
             return View();
