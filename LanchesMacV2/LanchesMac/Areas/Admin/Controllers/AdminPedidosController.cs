@@ -40,6 +40,7 @@ namespace LanchesMac.Areas.Admin.Controllers
             model.RouteValue = new RouteValueDictionary { { "filter", filter } };
 
             return View(model);
+        }
 
         // GET: Admin/AdminPedidos/Details/5
         public async Task<IActionResult> Details(int? id)
@@ -164,14 +165,15 @@ namespace LanchesMac.Areas.Admin.Controllers
             {
                 _context.Pedidos.Remove(pedido);
             }
-            
+
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool PedidoExists(int id)
         {
-          return _context.Pedidos.Any(e => e.PedidoId == id);
+            return _context.Pedidos.Any(e => e.PedidoId == id);
+
         }
     }
 }
