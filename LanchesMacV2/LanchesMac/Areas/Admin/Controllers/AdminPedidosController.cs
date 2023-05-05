@@ -34,15 +34,17 @@ namespace LanchesMac.Areas.Admin.Controllers
                         .FirstOrDefault(p => p.PedidoId == id);
 
             if(pedido == null)
+            { 
                 Response.StatusCode = 404;
-            return View("PedidoNotFound", id.Value);
+                return View("PedidoNotFound", id.Value);
+            }
 
-            PedidoLancheViewModel pedidoLanche = new PedidoLancheViewModel()
+            PedidoLancheViewModel pedidoLanches = new PedidoLancheViewModel()
             {
                 Pedido = pedido,
                 PedidoDetalhes = pedido.PedidoItens
             };
-            return View(pedidoLanche);
+            return View(pedidoLanches);
         }
 
         //// GET: Admin/AdminPedidos
