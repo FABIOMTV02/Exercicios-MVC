@@ -4,10 +4,10 @@ using Microsoft.EntityFrameworkCore;
 
 namespace LanchesMac.Areas.Admin.Services
 {
-    public class RelatorioVendasServices
+    public class RelatorioVendasService
     {
         private readonly AppDbContext context;
-        public RelatorioVendasServices(AppDbContext _context)
+        public RelatorioVendasService(AppDbContext _context)
         {
             context = _context;
         }

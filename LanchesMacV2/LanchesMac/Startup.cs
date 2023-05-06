@@ -28,11 +28,14 @@ public class Startup
              .AddEntityFrameworkStores<AppDbContext>()
              .AddDefaultTokenProviders();
 
+        services.ConfigureApplicationCookie(options => options.AccessDeniedPath = "Home/AccessDenied");
+        services.Configure<ConfigurationImagens>(Configuration.GetSection("ConfigurationPastaImagens"));
+
         services.AddTransient<ILancheRepository, LancheRepository>();
         services.AddTransient<ICategoriaRepository, CategoriaRepository>();
         services.AddTransient<IPedidoRepository,PedidoRepository>();
         services.AddScoped<ISeedUserRoleInitial,SeedUserRoleInitial>();
-        services.AddScoped<RelatorioVendasServices>();
+        services.AddScoped<RelatorioVendasService>();
 
         services.AddAuthorization(options =>
         {
@@ -81,6 +84,10 @@ public class Startup
         //cria os usuarios e atribui ao perfil
         seedUserRoleInitial.SeedUsers();
 
+        app.UseHttpsRedirection();
+        app.UseStaticFiles();
+
+        app.UseRouting();
         app.UseSession();
 
         app.UseAuthentication();
