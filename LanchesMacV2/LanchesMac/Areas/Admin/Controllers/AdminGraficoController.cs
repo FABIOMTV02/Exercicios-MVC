@@ -19,6 +19,8 @@ namespace LanchesMac.Areas.Admin.Controllers
             return Json(lanchesVendasTotais);
         }
 
+        //Erro no acionamento das views abaixo!!!
+
         [HttpGet]
         public IActionResult Index(int dias)
         {
